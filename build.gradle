@@ -22,7 +22,6 @@ dependencies {
 	implementation project(path:':com.capitole.application')
 	implementation project(path:':com.capitole.domain')
 	implementation project(path:':com.capitole.infrastructure')
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

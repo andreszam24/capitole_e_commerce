@@ -3,5 +3,5 @@ package com.capitole.brand;
 import com.capitole.common.StronglyTypedIdentifier;
 
 @StronglyTypedIdentifier
-public record BrandId(int id) {
+public record BrandId(long id) {
 }
