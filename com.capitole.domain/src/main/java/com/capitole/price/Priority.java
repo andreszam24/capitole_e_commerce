@@ -4,7 +4,7 @@ import com.capitole.common.ValueObject;
 import com.capitole.exception.NegativeOrNullNumberException;
 
 @ValueObject
-public class Priority {
+public final class Priority {
     private final int value;
 
     private Priority(int value) {

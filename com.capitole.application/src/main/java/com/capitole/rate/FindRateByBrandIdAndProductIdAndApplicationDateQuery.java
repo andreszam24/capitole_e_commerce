@@ -5,13 +5,13 @@ import com.capitole.rate.dto.FindRateResponseDTO;
 
 import java.time.LocalDateTime;
 
-public final class FindRateQuery implements Query<FindRateResponseDTO> {
+public final class FindRateByBrandIdAndProductIdAndApplicationDateQuery implements Query<FindRateResponseDTO> {
 
     private final LocalDateTime applicationDate;
     private final long productId;
-    private final int brandId;
+    private final long brandId;
 
-    public FindRateQuery(LocalDateTime applicationDate, long productId, int brandId) {
+    public FindRateByBrandIdAndProductIdAndApplicationDateQuery(LocalDateTime applicationDate, long productId, long brandId) {
         this.applicationDate = applicationDate;
         this.productId = productId;
         this.brandId = brandId;
@@ -25,7 +25,7 @@ public final class FindRateQuery implements Query<FindRateResponseDTO> {
         return productId;
     }
 
-    public int getBrandId() {
+    public long getBrandId() {
         return brandId;
     }
 
