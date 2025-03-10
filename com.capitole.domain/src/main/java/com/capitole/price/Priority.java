@@ -13,7 +13,7 @@ public final class Priority {
 
     public static Priority create(int value) {
 
-        if (value <= 0) {
+        if (value < 0) {
             throw new NegativeOrNullNumberException("Priority");
         }
         return new Priority(value);

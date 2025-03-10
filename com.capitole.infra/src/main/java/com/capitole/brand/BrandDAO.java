@@ -1,15 +1,15 @@
-package com.capitole.product;
+package com.capitole.brand;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "PRODUCTS")
-public class ProductDAO {
+@Table(name = "BRANDS")
+public class BrandDAO {
 
-    @Id()
+    public BrandDAO(){}
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private long id;
 
@@ -20,7 +20,7 @@ public class ProductDAO {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,4 +31,5 @@ public class ProductDAO {
     public void setName(String name) {
         this.name = name;
     }
+
 }

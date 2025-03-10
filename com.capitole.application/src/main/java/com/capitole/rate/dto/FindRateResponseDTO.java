@@ -10,8 +10,5 @@ public record FindRateResponseDTO(
         int priceList,
         LocalDateTime startDate,
         LocalDateTime endDate,
-
-        int priority,
-        BigDecimal amount,
-        String currency) {
+        String price) {
 }

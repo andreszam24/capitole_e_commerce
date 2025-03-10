@@ -1,5 +1,7 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'org.springframework.boot' version '3.4.2'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.capitole'
@@ -10,7 +12,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation project(path:':com.capitole.application')
+    implementation project(path:':com.capitole.domain')
+    implementation project(path:':com.capitole.infra')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
