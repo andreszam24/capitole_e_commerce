@@ -57,7 +57,6 @@ public class FindRateByBrandIdAndProductIdAndApplicationDateQueryHandlerTest {
         assertEquals(rangeDate.getEndDate(), rate.endDate());
         assertEquals(priceList.getId(), rate.priceList());
         assertEquals(product.getId().id(), rate.productId());
-        assertEquals(priority.getValue(), rate.priority());
-        assertEquals(money.getAmount(), rate.amount());
+        assertEquals(money.getAmount() + " " + money.getCurrency(), rate.price());
     }
 }
