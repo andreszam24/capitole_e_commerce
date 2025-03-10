@@ -55,7 +55,7 @@ La aplicación gestiona las tarifas (rates) para productos de una cadena. Se dis
 Se han implementado pruebas de integración usando TestRestTemplate para validar los 5 casos de uso del endpoint /api/rate. Estas pruebas se pueden ejecutar con:
 
 ```bash
-./gradlew test
+./gradlew :com.capitole.application:test :com.capitole.domain:test test
 ```
 ## Uso del API
 El endpoint para consultar la tarifa es:
