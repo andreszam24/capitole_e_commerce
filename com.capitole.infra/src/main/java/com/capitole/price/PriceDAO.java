@@ -1,11 +1,8 @@
 package com.capitole.price;
 
-import com.capitole.brand.Brand;
 import com.capitole.brand.BrandDAO;
-import com.capitole.product.Product;
 import com.capitole.product.ProductDAO;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,13 +11,14 @@ import java.time.LocalDateTime;
 @Table(name = "PRICES")
 public final class PriceDAO {
 
-    @Id()
+    public PriceDAO() {}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
 
     @ManyToOne
     @JoinColumn(name = "BRAND_ID", referencedColumnName = "ID")
-    @Column(name = "BRAND_ID")
     private BrandDAO brand;
 
     @Column(name = "START_DATE")
@@ -34,7 +32,6 @@ public final class PriceDAO {
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID", referencedColumnName = "ID")
-    @Column(name = "PRODUCT_ID")
     private ProductDAO product;
 
     @Column(name = "PRIORITY")

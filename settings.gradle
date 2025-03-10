@@ -1,7 +1,7 @@
 rootProject.name = 'inditex'
 include 'com.capitole.api'
 include 'com.capitole.application'
-include 'com.capitole.application'
 include 'com.capitole.domain'
 include 'com.capitole.infrastructure'
+include 'com.capitole.infra'
 

@@ -8,5 +8,5 @@ import java.time.LocalDateTime;
 
 public interface PriceRepository {
 
-    Price findRateByDateAndProductIdAndBrandId(LocalDateTime date, ProductId productId, BrandId brandId);
+    Price findRateByDateAndProductIdAndBrandId(ProductId productId, LocalDateTime date, BrandId brandId);
 }

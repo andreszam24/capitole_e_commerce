@@ -1,15 +1,13 @@
-package com.capitole.brand;
+package com.capitole.product;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "BRANDS")
-public class BrandDAO {
+@Table(name = "PRODUCTS")
+public class ProductDAO {
 
-    @Id()
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private long id;
 
@@ -20,7 +18,7 @@ public class BrandDAO {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -31,5 +29,4 @@ public class BrandDAO {
     public void setName(String name) {
         this.name = name;
     }
-
 }
