@@ -1,6 +1,6 @@
 package com.capitole;
 
-import com.capitole.rate.dto.FindRateResponseDTO;
+import com.capitole.rate.dto.FindRateQueryResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,8 +24,8 @@ public class RateIntegrationTests {
         String url = PATH + "applicationDate=2020-06-14T10:00:00&productId=35455&brandId=1";
 
         //Act
-        ResponseEntity<FindRateResponseDTO> response = restTemplate.getForEntity(url, FindRateResponseDTO.class);
-        FindRateResponseDTO dto = response.getBody();
+        ResponseEntity<FindRateQueryResponse> response = restTemplate.getForEntity(url, FindRateQueryResponse.class);
+        FindRateQueryResponse dto = response.getBody();
 
         //Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -43,8 +43,8 @@ public class RateIntegrationTests {
         String url = PATH + "applicationDate=2020-06-14T16:00:00&productId=35455&brandId=1";
 
         //Act
-        ResponseEntity<FindRateResponseDTO> response = restTemplate.getForEntity(url, FindRateResponseDTO.class);
-        FindRateResponseDTO dto = response.getBody();
+        ResponseEntity<FindRateQueryResponse> response = restTemplate.getForEntity(url, FindRateQueryResponse.class);
+        FindRateQueryResponse dto = response.getBody();
 
         //Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -60,8 +60,8 @@ public class RateIntegrationTests {
         String url = PATH + "applicationDate=2020-06-14T21:00:00&productId=35455&brandId=1";
 
         //Act
-        ResponseEntity<FindRateResponseDTO> response = restTemplate.getForEntity(url, FindRateResponseDTO.class);
-        FindRateResponseDTO dto = response.getBody();
+        ResponseEntity<FindRateQueryResponse> response = restTemplate.getForEntity(url, FindRateQueryResponse.class);
+        FindRateQueryResponse dto = response.getBody();
 
         //Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -78,8 +78,8 @@ public class RateIntegrationTests {
         String url = PATH + "applicationDate=2020-06-15T10:00:00&productId=35455&brandId=1";
 
         //Act
-        ResponseEntity<FindRateResponseDTO> response = restTemplate.getForEntity(url, FindRateResponseDTO.class);
-        FindRateResponseDTO dto = response.getBody();
+        ResponseEntity<FindRateQueryResponse> response = restTemplate.getForEntity(url, FindRateQueryResponse.class);
+        FindRateQueryResponse dto = response.getBody();
 
         //Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -95,8 +95,8 @@ public class RateIntegrationTests {
         String url = PATH + "applicationDate=2020-06-16T21:00:00&productId=35455&brandId=1";
 
         //Act
-        ResponseEntity<FindRateResponseDTO> response = restTemplate.getForEntity(url, FindRateResponseDTO.class);
-        FindRateResponseDTO dto = response.getBody();
+        ResponseEntity<FindRateQueryResponse> response = restTemplate.getForEntity(url, FindRateQueryResponse.class);
+        FindRateQueryResponse dto = response.getBody();
 
         //Assert
         assertEquals(HttpStatus.OK, response.getStatusCode());

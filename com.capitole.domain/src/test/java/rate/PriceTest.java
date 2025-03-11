@@ -59,7 +59,7 @@ public class PriceTest {
         assertEquals(validPriceList, price.getPriceList());
         assertEquals(validProduct, price.getProduct());
         assertEquals(validPriority, price.getPriority());
-        assertEquals(validMoney, price.getPrice());
+        assertEquals(validMoney, price.getMoney());
 
     }
 

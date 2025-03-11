@@ -9,6 +9,7 @@ Este proyecto es una implementación de una prueba técnica para el cargo de Sen
 - [Tecnologías](#tecnologías)
 - [Requisitos](#requisitos)
 - [Instalación y Configuración](#instalación-y-configuración)
+- [API First y Documentación](#api-first-y-documentación)
 - [Pruebas de Integración](#pruebas-de-integración)
 - [Uso del API](#uso-del-api)
 
@@ -50,6 +51,15 @@ La aplicación gestiona las tarifas (rates) para productos de una cadena. Se dis
 
 3. **Poblar la base de datos:**
    El archivo data.sql en src/main/resources contiene los scripts para poblar con datos de ejemplo.
+
+## API First y Documentación
+Este proyecto adopta el enfoque API First, definiendo previamente el contrato de la API mediante un archivo OpenAPI (ubicado en src/main/resources/api/openapi.yaml). A partir de este contrato se pueden generar stubs y se documenta la API.
+
+La documentación interactiva se genera utilizando Springdoc OpenAPI. Al iniciar la aplicación, podrás acceder a Swagger UI en:
+
+http://localhost:8080/swagger-ui/index.html
+
+Si realizas cambios en el contrato OpenAPI, deberás regenerar el código con el plugin de OpenAPI Generator (configurado en Gradle) para que los stubs se actualicen.
 
 ## Pruebas de Integración
 Se han implementado pruebas de integración usando TestRestTemplate para validar los 5 casos de uso del endpoint /api/rate. Estas pruebas se pueden ejecutar con:

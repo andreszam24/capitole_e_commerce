@@ -44,7 +44,7 @@ public final class Price extends EntityBase {
         return new Price(priceId, brand, rangeDate, priceList, product, priority, price);
     }
 
-    public Money getPrice() {
+    public Money getMoney() {
         return price;
     }
 
