@@ -1,11 +1,11 @@
 package com.capitole.rate;
 
 import com.capitole.common.Query;
-import com.capitole.rate.dto.FindRateResponseDTO;
+import com.capitole.rate.dto.FindRateQueryResponse;
 
 import java.time.LocalDateTime;
 
-public final class FindRateByBrandIdAndProductIdAndApplicationDateQuery implements Query<FindRateResponseDTO> {
+public final class FindRateByBrandIdAndProductIdAndApplicationDateQuery implements Query<FindRateQueryResponse> {
 
     private final LocalDateTime applicationDate;
     private final long productId;
